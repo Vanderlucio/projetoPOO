@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio POO</title>
+    <script>
+        class Veiculo{
+            constructor(nome, quantidadeRodas, tipoMotor){
+                this._nome = nome,
+                this._quantidadeRodas = quantidadeRodas,
+                this._tipoMotor= tipoMotor
+            }
+
+            get nome(){
+                return this._nome
+            }
+
+            set nome(nome){
+                this._nome= nome
+            }
+
+            get tipoMotor(){
+                return this._tipoMotor
+            }
+
+            set nome(tipoMotor){
+                this._tipoMotor= tipoMotor
+            }
+
+            get quantidadeRodas(){
+                return this._quantidadeRodas
+            }
+
+            set nome(quantidadeRodas){
+                this._quantidadeRodas= quantidadeRodas
+            }
+
+            acelerar(){
+                if(this.tipoMotor == 0){
+                    console.log("⛽ Acelerando com motor a combustão")
+                }
+                if(this.tipoMotor == 1){
+                    console.log("🔋 Acelerando com motor elétrico")
+                }    
+                
+                console.log(`Acelerando ${this.nome} com ${this.quantidadeRodas} rodas.`)
+            }
+
+
+        }
+
+        class Carro extends Veiculo{
+          constructor(nome, quantidadeRodas, tipoMotor){
+            super(nome, quantidadeRodas, tipoMotor)
+          }
+        }
+
+        class Moto extends Veiculo{
+          constructor(nome, quantidadeRodas, tipoMotor){
+            super(nome, quantidadeRodas, tipoMotor)
+          }
+        }
+
+        //teste
+        const carro = new Carro("BYD", 4, 0)
+        carro.acelerar()
+
+        const moto = new Moto("Yamaha", 2, 0)
+        moto.acelerar()
+
+        const carro2 = new Carro("BMW", 4, 1)
+        carro2.acelerar()
+
+        const moto2 = new Moto("Honda Twister", 2, 1)
+        moto2.acelerar()
+
+        
+
+    </script>
+</head>
+<body>
+
+    <h1>Desafio da semana: <a href="#" onclick="alert('Pressione F12 ou Ctrl+Shift+I para abrir o console do navegador')">Abrir Console</a></h1>
+</body>
+</html>
