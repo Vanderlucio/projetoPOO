@@ -1,2 +1,2 @@
 # projetoPOO
-Explorando classes  
+Explorando classes, Heranças e métodos
